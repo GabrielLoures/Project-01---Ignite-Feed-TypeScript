@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: 246px 1fr;
+  gap: 2rem;
+  align-items: flex-start; /* alinha os elementos no topo e evita que um dos elementos se estique para ficar equiparado ao outro; nesse caso, nossa sidebar deve ficar alinhada no topo com a altura definida menor do que do elemento do Post */
+}
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 87.5%;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}

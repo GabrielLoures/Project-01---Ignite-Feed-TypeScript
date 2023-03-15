@@ -1,0 +1,95 @@
+.comment {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.comment > img {
+  width: 3rem; /* os 12px são provenientes da soma do border (2x4px) com o outline (2x2px) */
+  height: 3rem;
+  border-radius: 8px;
+}
+
+.commentBox {
+  flex: 1;
+}
+
+.commentContent {
+  background: var(--gray-700);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.commentContent header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.authorAndTime {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorAndTime strong {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.authorAndTime time {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--gray-400);
+}
+
+.commentContent header button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-400);
+  cursor: pointer;
+
+  line-height: 0; /* usamos esse comando porque, por padrão, as bordas dos botões não levam em consideração o conteúdo dele para ajustar seu tamanho (sobra espaço) e esse comando ajusta as bordas dele para o conteúdo */
+  border-radius: 2px;
+
+  transition: color 0.2s;
+}
+
+.commentContent header button:hover {
+  color: var(--red-500);
+}
+
+.commentContent p {
+  margin-top: 1rem;
+  color: var(--gray-300);
+}
+
+.commentBox footer {
+  margin-top: 1rem;
+}
+
+.commentBox footer button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-400);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+
+  transition: color 0.2s;
+}
+
+.commentBox footer button:hover {
+  color: var(--green-300);
+}
+
+.commentBox footer svg {
+  margin-right: 0.5rem;
+}
+
+.commentBox footer button span::before { /* cria um elemento antes do elemento selecionado (nesse caso o span) */
+  content: "\2022"; /* o conteúdo \2022 é o pontinho visto em tela, o próprio HTML lê esse comando e aplica o ponto */
+  padding: 0 0.25rem;
+}
